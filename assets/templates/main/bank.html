@@ -1,0 +1,352 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Tivo is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
+    <meta name="author" content="Inovatik">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>Server Down Detector</title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="{% static 'main/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'main/css/fontawesome-all.css' %}" rel="stylesheet">
+    <link href="{% static 'main/css/swiper.css' %}" rel="stylesheet">
+	<link href="{% static 'main/css/magnific-popup.css' %}" rel="stylesheet">
+	<link href="{% static 'main/css/styles.css' %}" rel="stylesheet">
+	
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+    
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
+
+            <!-- Image Logo -->
+            <h3 style="color: white";><i><b>SERVER DOWN DETECTOR</b></i></h3> 
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-awesome fas fa-bars"></span>
+                <span class="navbar-toggler-awesome fas fa-times"></span>
+            </button>
+            <!-- end of mobile menu toggle button -->
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll-active" href="{% url 'home' %}">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="{% url 'social' %}">Social Media Server</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="{% url 'bank' %}">Bank Server</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="{% url 'telecommunication' %}">TeleCommunicaton Server</a>
+                    </li>
+                    
+                
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="{% url 'about' %}">About</a>
+                    </li>
+  
+                    <span class="nav-item">
+                        <a class="btn-outline-sm" href="{% url 'admin' %}">Admin </a>
+                    </span>
+                    <span class="nav-item">
+                        <a class="btn-outline-sm" href="{% url 'user' %}">User </a>
+                    </span>
+                </ul>
+            </div>
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+
+    <!-- Header -->
+    <header id="header" class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Bank Server</h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+<br><br>
+
+    <!-- Breadcrumbs -->
+    <div class="container">
+        <div class="card-deck">
+            
+            <div class="card">
+              <img class="card-img-top" src="{% static 'main/images/sbi-card.png' %}" alt="Card image cap">
+              
+              <div class="card-body">
+                <h5 class="card-title"><center>SBI</center></h5>
+            </div>
+            
+              <div class="card-body">
+                <p class="card-text">{{ c4.Description }}</p>
+                <p class="card-text"><small class="text-muted">{{ c4.Posted_Date }}</small></p>
+              </div>
+              
+              
+            </div>
+            
+        
+            <div class="card">
+              <img class="card-img-top" src="{% static 'main/images/bob-card.png' %}" alt="Card image cap">
+              
+              <div class="card-body">
+                <h5 class="card-title"><center>BOB</center></h5>
+                </div>
+                 
+                <div class="card-body">
+                <p class="card-text">{{ c5.Description }}</p>
+                <p class="card-text"><small class="text-muted">{{ c5.Posted_Date }}</small></p>
+              </div>
+              
+            </div>
+    
+            
+            <div class="card">
+              <img class="card-img-top" src="{% static 'main/images/boi-card.png' %}" alt="Card image cap">
+              
+              <div class="card-body">
+                <h5 class="card-title"><center>BOI</center></h5>
+              </div>
+              
+              <div class="card-body">
+                <p class="card-text">{{ c6.Description }}</p>
+                <p class="card-text"><small class="text-muted">{{ c6.Posted_Date }}</small></p>
+              </div>
+              
+            </div>
+            
+        </div>
+        </div>
+     </div>    
+                  
+                      
+    
+               
+        <br><br><br>
+        <div class="container">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Bank </th>
+                <th scope="col">Complaints</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td><b>SBI</b></td>
+               
+                {% comment %} <td>{{c4.Description}}</td> {% endcomment %}
+                <td><textarea readonly="true" class="form-control border-0 bg-light px-4 py-3" rows="3"
+                    placeholder="complaint description">{{c4.Description}}</textarea></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td><b>BOB</b></td>
+                
+                {% comment %} <td>{{c5.Description}}</td> {% endcomment %}
+                <td><textarea readonly="true" class="form-control border-0 bg-light px-4 py-3" rows="3"
+                    placeholder="complaint description">{{c5.Description}}</textarea></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td><b>BOI</b></td>
+               
+                {% comment %} <td>{{c6.Description}}</td> {% endcomment %}
+                <td><textarea readonly="true" class="form-control border-0 bg-light px-4 py-3" rows="3"
+                    placeholder="complaint description">{{c6.Description}}</textarea></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+    <!-- Privacy Content -->
+    <div class="ex-basic-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="image-container-large">
+                        <img class="img-fluid" src="{% static 'main/images/bm.jpg' %}" alt="alternative">
+                    </div> <!-- end of image-container-large -->
+                    <div class="text-container">
+                        <h3>Bank Server Down</h3>
+                        <p>As the name suggests, bank server unavailable means that the bank server you are trying to reach is currently busy or down due to some issues. That’s the most common cause of this problem. On the contrary, it is also possible that there may be some problems from your side as well. </p>
+                        <p>Although organizations often take every precaution imaginable, the threat of server downtime is difficult to fully eliminate. With even a few minutes of downtime likely to cost dearly in terms of lost productivity and opportunity, companies are turning to data centers to keep their mission-critical network systems up and running no matter the circumstances.</p> 
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled li-space-lg indent">
+                                    <li class="media">
+                                        <i class="fas fa-square"></i>
+                                        <div class="media-body">Security Concerns</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-square"></i>
+                                        <div class="media-body">Cyber Attacks</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-square"></i>
+                                        <div class="media-body">Equipment Failure</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-square"></i>
+                                        <div class="media-body">Software Failure</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-square"></i>
+                                        <div class="media-body">Hackers</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-square"></i>
+                                        <div class="media-body">Internet Connection Problems </div>
+                                    </li>
+                                </ul>
+                            </div> <!-- end of col -->
+
+                            
+                        </div> <!-- end of row -->
+                    </div> <!-- end of text-container-->
+                    
+                    
+                    
+
+                    
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-2 -->
+    <!-- end of privacy content -->
+
+
+    <!-- Breadcrumbs -->
+    
+    
+    <svg class="footer-frame" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 79"><defs><style>.cls-2{fill:#5f4def;}</style></defs><title>footer-frame</title><path class="cls-2" d="M0,72.427C143,12.138,255.5,4.577,328.644,7.943c147.721,6.8,183.881,60.242,320.83,53.737,143-6.793,167.826-68.128,293-60.9,109.095,6.3,115.68,54.364,225.251,57.319,113.58,3.064,138.8-47.711,251.189-41.8,104.012,5.474,109.713,50.4,197.369,46.572,89.549-3.91,124.375-52.563,227.622-50.155A338.646,338.646,0,0,1,1920,23.467V79.75H0V72.427Z" transform="translate(0 -0.188)"/></svg>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                
+                
+                <div class="col-md-4">
+                    <div class="footer-col middle">
+                        <h4>Social Media Server Down</h4>
+                        <ul class="list-unstyled li-space-lg p-small">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Hackers</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Technical problems</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+                    <div class="footer-col middle">
+                        <h4>Bank Server Down</h4>
+                        <ul class="list-unstyled li-space-lg p-small">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body"> Equipment Failure</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Internet Connection</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+                    <div class="footer-col middle">
+                        <h4>Telecom Server Down</h4>
+                        <ul class="list-unstyled li-space-lg p-small">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Technology/Device Failure</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Natural Disaster</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- end of col -->
+
+                
+                
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class='text-white'><b>Copyright (c) Codebook.in, All Right Reserved By <a href="https://codebook.in/" class="text-warning">Codebook.in</a></p><b></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright --> 
+    <!-- end of copyright -->
+    
+    	
+    <!-- Scripts -->
+    <script src="{% static 'main/js/jquery.min.js' %}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{% static 'main/js/popper.min.js' %}"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="{% static 'main/js/bootstrap.min.js' %}"></script> <!-- Bootstrap framework -->
+    <script src="{% static 'main/js/jquery.easing.min.js' %}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="{% static 'main/js/swiper.min.js' %}"></script> <!-- Swiper for image and text sliders -->
+    <script src="{% static 'main/js/jquery.magnific-popup.js' %}"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="{% static 'main/js/validator.min.js' %}"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="{% static 'main/js/scripts.js' %}"></script> <!-- Custom scripts -->
+</body>
+</html>

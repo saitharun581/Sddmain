@@ -1,0 +1,55 @@
+<div class="col-md-12">
+  <center>
+     
+      <h1>  Select the category </h1>
+      <div class="form-group col-md-4 mb-3">
+          
+          <select name="category" class="form-control" placeholder="Select One">
+              <option value="" Selected>Select</option>
+              <option name="d1">Facebook</option>
+              <option name="d2">Whatsapp</option>
+              <option name="d3">Instagram</option>
+              <option name="d4">State Bank of India</option>
+              <option name="d5">Bank of India</option>
+              
+              <option name="d6">Bank of Baroda</option>
+              <option name="d7">Airtel</option>
+              <option name="d8">BSNL</option>
+              <option name="d9">Jio</option>
+
+          </select>
+      </div>
+      </center>
+</div>  
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+ 
+    
+<br><br><br><br>
+
+<center>
+  <div class="row-justify-content-center">
+  <div class="col-md-8">
+  <div class="form-group">
+      <center>
+      <label for="exampleFormControlTextarea1"><h3>Complaints<hr></h3></label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+      <br>
+      <button type="button" class="btn btn-outline-info">submit</button>
+      </center>
+    </div>
+  </form>
+   </div> 
+  </div> 
+</center> 

@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="{% static 'admin/css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="{% static 'admin/css/font-awesome.css' %}" rel="stylesheet" />
+    <!-- CUSTOM STYLES-->
+    <link href="{% static 'admin/css/custom.css' %}" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"> Admin</a>
+            </div>
+            <div style="color: white;
+padding: 15px 50px 5px 50px;
+float: right;
+font-size: 16px;">
+            </div>
+        </nav>
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li class="text-center">
+                        <img src="{% static 'admin/img/find_user.png' %}" class="user-image img-responsive" />
+                    </li>
+
+
+                    <li>
+                        <a href="{% url 'adminhome' %}"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a class="active-menu" href="{% url 'adminsocial' %}"><i class="fa fa-desktop fa-3x"></i>Social Media server </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'adminbank' %}"><i class="fa fa-desktop fa-3x"></i>Bank Server </a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a href="{% url 'admintelecom' %}"><i class="fa fa-bar-chart-o fa-3x"></i> Telecommunication Server</a>
+                    </li>
+                    
+                    
+
+                    <li>
+                        <a href="{% url 'adminuserdetails' %}"><i class="fa fa-edit fa-3x"></i> User Details</a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="{% url 'admin' %}"><i class="fa fa-square-o fa-3x"></i> Log Out</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Instagram Complaints</h2>
+                        <h5> </h5>
+
+                    </div>
+                </div>
+                <br><br><br>
+
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col"><h4><b>Complaint Id</b></h4></th>
+                        <th scope="col"><h4><b>Complaint Description</b></h4></th>
+
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for a in i1 %}
+
+                      <tr>
+                        <th scope="row">{{a.complaint_id}}</th>
+                        {% comment %} <td>{{a.Description}}</td> {% endcomment %}
+                        <td><textarea readonly="true" class="form-control border-0 bg-light px-4 py-3" rows="3"
+							>{{a.Description}}</textarea></td>
+                        
+                      </tr>
+                    {% endfor %} 
+                    </tbody>
+                    
+                  </table>
+
+                <!-- /. ROW  -->
+                <hr />
+                </div>
+                <br><br>
+
+
+                
+                
+                
+                                   
+
+                               
+                                <!-- /. WRAPPER  -->
+                                <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+                                <!-- JQUERY SCRIPTS -->
+                                <script src="{% static 'admin/js/jquery-1.10.2.js' %}"></script>
+                                <!-- BOOTSTRAP SCRIPTS -->
+                                <script src="{% static 'admin/js/bootstrap.min.js' %}"></script>
+                                <!-- METISMENU SCRIPTS -->
+                                <script src="{% static 'admin/js/jquery.metisMenu.js' %}"></script>
+                                <!-- CUSTOM SCRIPTS -->
+                                <script src="{% static 'admin/js/custom.js' %}"></script>
+
+
+</body>
+
+</html>
